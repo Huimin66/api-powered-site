@@ -18,17 +18,19 @@ function data(pokemonData) {
     function pokemonDetails(pokemonDetailsEach) {
       const pokemonAllData = pokemonDetailsEach;
 
-      const pokemonCard = document.createElement('li');
+      const pokemonCard = document.createElement('section');
 
       pokemonCard.innerHTML = `
+   
      <img src="${pokemonDetailsEach.sprites.front_default}" />
+
      <dl>
       <h2> ${pokemonDetailsEach.name}</h2>
-       <dt>Height</dt>
-      <dd>${pokemonDetailsEach.height}</dd>
-      <dt>Weight</dt>
-      <dd>${pokemonDetailsEach.weight}</dd>
+       <dt>Height: ${pokemonDetailsEach.height}</dt>
+       <dt>Weight: ${pokemonDetailsEach.weight}</dt>
+    
       </dl>
+      
       `;
 
       pokemonCard.className = 'pokemon-list__item ';
