@@ -6,9 +6,7 @@
 
 ul[role='list'] {
   list-style: none;
-  display: grid;
   gap: 12px;
-  max-width: 300px;
 }
 
 .card {
@@ -26,4 +24,24 @@ ul[role='list'] {
 
 .hide {
   display: none;
+}
+
+.main-container {
+  width: 70%;
+  margin: auto;
+}
+
+.pokemon-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pokemon-list__item {
+  list-style-type: none;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  min-height: 300px;
+  min-width: 300px;
 }
