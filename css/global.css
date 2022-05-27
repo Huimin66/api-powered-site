@@ -1,8 +1,29 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  font-family: sans-serif;
-  margin: 0;
+ul[role='list'] {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  max-width: 300px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.details {
+  margin-top: 8px;
+}
+
+.details dt {
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
 }
