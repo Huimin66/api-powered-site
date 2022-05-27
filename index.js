@@ -1,6 +1,13 @@
-fetch('https://pokeapi.co/api/v2/pokemon/')
-  .then(response => response.json())
-  .then(data);
+const url = 'https://pokeapi.co/api/v2/pokemon/';
+
+function fetchData(url, data) {
+  fetch(url)
+    .then(response => response.json())
+    .then(data)
+    .catch(error);
+}
+
+fetchData(url, data);
 
 function data(pokemonData) {
   const pokemon = pokemonData.results;
@@ -11,13 +18,9 @@ function data(pokemonData) {
   mainContainer.append(pokemonList);
 
   pokemon.forEach(eachPokemon => {
-    fetch(eachPokemon.url)
-      .then(response => response.json())
-      .then(pokemonDetails);
+    fetchData(eachPokemon.url, pokemonDetails);
 
     function pokemonDetails(pokemonDetailsEach) {
-      const pokemonAllData = pokemonDetailsEach;
-
       const pokemonCard = document.createElement('section');
 
       pokemonCard.innerHTML = `
@@ -37,6 +40,11 @@ function data(pokemonData) {
       pokemonList.append(pokemonCard);
     }
   });
+}
+
+function error(e) {
+  document.body.innerText = 'Oooops -' + e.message;
+  console.log(e.message);
 }
 
 //////////////  Content
