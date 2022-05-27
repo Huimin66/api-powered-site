@@ -16,6 +16,18 @@ function data(pokemonData) {
       const pokemonAllData = pokemonDetailsEach;
 
       const pokemonCard = document.createElement('li');
+
+      pokemonCard.innerHTML = `
+      <h2> ${pokemonDetailsEach.name}</h2>
+      <dt>Height</dt>
+      <dd>${pokemonDetailsEach.height}</dd>
+      <dt>Weight</dt>
+      <dd>${pokemonDetailsEach.weight}</dd>
+
+
+      
+      `;
+
       pokemonCard.className = 'pokemon-list';
       pokemonList.append(pokemonCard);
     }
