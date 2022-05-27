@@ -18,14 +18,12 @@ function data(pokemonData) {
       const pokemonCard = document.createElement('li');
 
       pokemonCard.innerHTML = `
+      <img src="${pokemonDetailsEach.sprites.front_default}" />
       <h2> ${pokemonDetailsEach.name}</h2>
       <dt>Height</dt>
       <dd>${pokemonDetailsEach.height}</dd>
       <dt>Weight</dt>
-      <dd>${pokemonDetailsEach.weight}</dd>
-
-
-      
+      <dd>${pokemonDetailsEach.weight}</dd>      
       `;
 
       pokemonCard.className = 'pokemon-list';
@@ -33,11 +31,5 @@ function data(pokemonData) {
     }
   });
 }
-
-/// name
-
-// height
-
-// weight
 
 //////////////  Content
