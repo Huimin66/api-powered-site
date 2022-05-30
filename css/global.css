@@ -7,6 +7,7 @@
 
 body {
   font-family: sans-serif;
+  background-color: purple;
 }
 
 ul[role='list'] {
@@ -15,8 +16,21 @@ ul[role='list'] {
 }
 
 .card {
-  border: 1px solid #ddd;
   padding: 20px;
+}
+
+h1 {
+  padding: 2rem 0;
+  color: goldenrod;
+}
+
+h2 {
+  padding-bottom: 0.5rem;
+}
+
+img {
+  width: 170px;
+  height: 170px;
 }
 
 .details {
@@ -45,7 +59,7 @@ ul[role='list'] {
 
 .pokemon-list__item {
   list-style-type: none;
-  border: 1px solid #ccc;
+  border: 5px solid goldenrod;
   border-radius: 50%;
   min-height: 300px;
   min-width: 300px;
@@ -53,4 +67,5 @@ ul[role='list'] {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: white;
 }

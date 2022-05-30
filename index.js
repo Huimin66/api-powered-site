@@ -13,7 +13,16 @@ function data(pokemonData) {
   const pokemon = pokemonData.results;
   const mainContainer = document.querySelector('[data-js="main"]');
   const pokemonList = document.createElement('ul');
+  const heading = document.createElement('h1');
+
+  heading.style.fontSize = '3rem';
+  heading.style.textAlign = 'center';
+  heading.textContent = 'Awesome Pokemon API';
+
+  mainContainer.append(heading);
+
   pokemonList.setAttribute('role', 'list');
+
   pokemonList.className = 'pokemon-list';
   mainContainer.append(pokemonList);
 
@@ -28,7 +37,10 @@ function data(pokemonData) {
      <img src="${pokemonDetailsEach.sprites.front_default}" />
 
      <dl>
-      <h2> ${pokemonDetailsEach.name}</h2>
+      <h2> ${
+        pokemonDetailsEach.name[0].toUpperCase() +
+        pokemonDetailsEach.name.substring(1)
+      }</h2>
        <dt>Height: ${pokemonDetailsEach.height}</dt>
        <dt>Weight: ${pokemonDetailsEach.weight}</dt>
     
@@ -43,8 +55,7 @@ function data(pokemonData) {
 }
 
 function error(e) {
-  document.body.innerText = 'Oooops -' + e.message;
+  document.body.innerText =
+    'Sorry, Server Error. Please try again later. -' + e.message;
   console.log(e.message);
 }
-
-//////////////  Content
