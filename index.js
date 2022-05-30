@@ -13,7 +13,13 @@ function data(pokemonData) {
   const pokemon = pokemonData.results;
   const mainContainer = document.querySelector('[data-js="main"]');
   const pokemonList = document.createElement('ul');
-  const heading = document.querySelector('#heading');
+  const heading = document.createElement('h1');
+
+  heading.style.fontSize = '3rem';
+  heading.style.textAlign = 'center';
+  heading.textContent = 'Awesome Pokemon API';
+
+  mainContainer.append(heading);
 
   pokemonList.setAttribute('role', 'list');
 

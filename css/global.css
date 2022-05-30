@@ -19,6 +19,11 @@ ul[role='list'] {
   padding: 20px;
 }
 
+h1 {
+  padding: 2rem 0;
+  color: goldenrod;
+}
+
 h2 {
   padding-bottom: 0.5rem;
 }
